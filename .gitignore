@@ -99,3 +99,10 @@ $RECYCLE.BIN/
 *.fls
 *.out
 *.toc
+
+# Ignorar binários e cache
+build/
+bin/
+__pycache__/
+*.class
+.idea/

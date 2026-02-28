@@ -9,7 +9,5 @@ Este repositório contém meus estudos, exercícios e anotações sobre a discip
 - **Curso:** Ciência da Computação
 
 ## 🛠️ Tecnologias e Ferramentas
-- **Linguagem:** C (Padrão C99/C11)
-- **Compilador:** GCC (GNU Compiler Collection)
 - **IDE:** VS Code
 - **Controle de Versão:** Git & GitHub

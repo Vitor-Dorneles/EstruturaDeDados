@@ -24,18 +24,17 @@ int main(){
     }   
 
     string nome;
-    cout << "Digite um nome: ";
-    getline (cin, nome);
+    cout << "Digite um nome para apagar: ";
+    getline (cin, nome); // le a frase toda, cin == teclado e guarda na variavel nome
 
+    int apagou = apagarNome(nome, vetorNomes);
 
-    /*int posicao;
-    posicao = ondeEsta(nome, vetorNomes);
-    
-    if (posicao != -1){
-        vetorNomes[posicao] = "#";
-        totalNomesInseridos--;
+    if(apagou == 1){
+        totalNomesInseridos --;
+        cout << "Apagado.\n";
+    } else {
+        cout << "Nome não encontrado.\n";
     }
 
-    */
     return 0;
 }

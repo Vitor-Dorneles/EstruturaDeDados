@@ -1,0 +1,147 @@
+# criar a classe Clima em arquivo separado
+    - colocar construtor
+    - reescrever __str__
+    - reescrever __eq__
+
+# criar a classe Principal que vai executar o sistema
+    - declarar uma lista para receber os dados climáticos
+    - declarar o nome do arquivo que contém os dados climáticos
+    - criar um método que leia o arquivo dos dados climáticos e os 
+      transfira para a lista
+        - para cada linha do arquivo
+            - splitar pela virgula
+            - criar um objeto do tipo Clima
+            - inserir na lista o objeto da linha
+    - criar um método que exiba a lista com os dados climáticos
+    - criar as seguintes listas:
+        lista_estacao_chove_menos
+        lista_estacao_chove_muito
+        lista_estacao_quente
+        lista_estacao_amena
+	
+        ou
+
+        lista_verao
+        lista_outuno
+        lista_inverno
+        lista_primavera
+        
+
+
+
+
+Usando sua linguagem de preferência, é preciso tratar os dados climáticos presentes em dadosClimaticos.csv.
+
+Para isso, crie e utilize a classe Clima...
+public class Clima {
+    String ano; //2024, 2025, 2026
+    String mes; //Janeiro, Fevereiro, Março, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro
+    String temperatura; //Frio (até 15°C), Quente (acima de 25°C), Ameno (16°C a 25°C)
+    int precipitacao; //nada, pouca (até 20mm), média (21mm a 40mm), muita (mais de 40mm)
+    
+    public Clima(String ano, String mes, String temperatura, int precipitacao) {
+        this.ano = ano;
+        this.mes = mes;
+        this.temperatura = temperatura;
+        this.precipitacao = precipitacao;
+    }
+
+    @Override
+    public String toString() {
+        return "Clima [ano=" + ano + ", mes=" + mes + ", temperatura=" + temperatura + ", precipitacao=" + precipitacao
+                + "]";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Clima other = (Clima) obj;
+        if (ano == null) {
+            if (other.ano != null)
+                return false;
+        } else if (!ano.equals(other.ano))
+            return false;
+        if (mes == null) {
+            if (other.mes != null)
+                return false;
+        } else if (!mes.equals(other.mes))
+            return false;
+        return true;
+    }    
+}
+
+Sabendo que Verão são os meses Dezembro, Janeiro, Fevereiro, Março. Que Outono são os meses Abril, Maio, Junho, Julho. Que Inverno são os meses Agosto, Setembro, Outubro, Novembro.
+
+Preciso descobrir dentro da base dadosClimaticos.csv qual a estação que menos chove; qual a estação que mais chove; qual a estação mais quente; qual a estação mais amena.
+
+Lembrar de documentar corretamente.
+
+
+ano,mes,temperatura,precipitacao
+2020,Janeiro,Quente,muita
+2020,Fevereiro,Quente,muita
+2020,Março,Ameno,média
+2020,Abril,Ameno,pouca
+2020,Maio,Frio,nada
+2020,Junho,Frio,nada
+2020,Julho,Frio,pouca
+2020,Agosto,Ameno,nada
+2020,Setembro,Ameno,pouca
+2020,Outubro,Quente,média
+2020,Novembro,Quente,muita
+2020,Dezembro,Quente,muita
+2021,Janeiro,Quente,muita
+2021,Fevereiro,Quente,média
+2021,Março,Ameno,muita
+2021,Abril,Ameno,pouca
+2021,Maio,Frio,nada
+2021,Junho,Frio,nada
+2021,Julho,Frio,pouca
+2021,Agosto,Frio,nada
+2021,Setembro,Ameno,média
+2021,Outubro,Quente,muita
+2021,Novembro,Quente,média
+2021,Dezembro,Quente,muita
+2022,Janeiro,Quente,muita
+2022,Fevereiro,Quente,muita
+2022,Março,Ameno,média
+2022,Abril,Ameno,pouca
+2022,Maio,Frio,nada
+2022,Junho,Frio,pouca
+2022,Julho,Frio,nada
+2022,Agosto,Ameno,nada
+2022,Setembro,Ameno,pouca
+2022,Outubro,Quente,média
+2022,Novembro,Quente,muita
+2022,Dezembro,Quente,muita
+2023,Janeiro,Quente,muita
+2023,Fevereiro,Quente,média
+2023,Março,Quente,muita
+2023,Abril,Ameno,pouca
+2023,Maio,Ameno,nada
+2023,Junho,Frio,nada
+2023,Julho,Frio,nada
+2023,Agosto,Frio,pouca
+2023,Setembro,Ameno,média
+2023,Outubro,Quente,muita
+2023,Novembro,Quente,muita
+2023,Dezembro,Quente,média
+2024,Janeiro,Quente,muita
+2024,Fevereiro,Quente,muita
+2024,Março,Ameno,média
+2024,Abril,Ameno,pouca
+2024,Maio,Frio,nada
+2024,Junho,Frio,nada
+2024,Julho,Frio,pouca
+2024,Agosto,Frio,nada
+2024,Setembro,Ameno,pouca
+2024,Outubro,Quente,média
+2024,Novembro,Quente,muita
+2024,Dezembro,Quente,muita
+,,,
+          

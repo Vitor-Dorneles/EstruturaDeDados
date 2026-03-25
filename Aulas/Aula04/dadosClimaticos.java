@@ -22,10 +22,21 @@ public class dadosClimaticos {
     @Override
     public boolean equals(Object obj) { // reescrevemos o método equals para definir os atributos identificadores
         dadosClimaticos c =(dadosClimaticos)obj; // Transformamos o OBJ em "clima" , (cast)
-        return (this.ano .equals(c.ano) && this.mes.equals(c.mes));
+        return (this.ano .equals(c.ano) && this.mes.equals(c.mes)); // se dois registros tiverem o mesmo ano e mesmo mes eles são considerados iguais
 
       
     }
-  
+
+    public String getAno() {
+        return this.ano;
+    }
+    
+    public String getTemperatura() {
+        return this.temperatura;
+    }
+
+    public String getPrecipitacao() {
+        return this.precipitacao;
+    }
     
 }

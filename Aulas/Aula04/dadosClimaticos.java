@@ -1,11 +1,13 @@
 // Data: 18/03/2026
 public class dadosClimaticos {
+    //criação do objeto pros campos do csv
     public String ano;
     public String mes;
     public String temperatura;
     public String precipitacao;
 
-    public dadosClimaticos(String ano, String mes, String temperatura, String precipitacao) { // construtor
+    //construtor recebe os campos e gurda no objeto
+    public dadosClimaticos(String ano, String mes, String temperatura, String precipitacao) {
         this.ano = ano;
         this.mes = mes;
         this.temperatura = temperatura;
@@ -20,14 +22,15 @@ public class dadosClimaticos {
     }
     
     @Override
+    //equals compara se os objetos são iguais
     public boolean equals(Object obj) { // reescrevemos o método equals para definir os atributos identificadores
-        dadosClimaticos c =(dadosClimaticos)obj; // Transformamos o OBJ em "clima" , (cast)
+        dadosClimaticos c =(dadosClimaticos)obj; // Transformamos o OBJ em "dadosClimaticos" , (cast) e guardamos em "C"
         return (this.ano .equals(c.ano) && this.mes.equals(c.mes)); // se dois registros tiverem o mesmo ano e mesmo mes eles são considerados iguais
 
       
     }
 
-    public String getAno() {
+    public String getAno() { //retorna o ano do objeto
         return this.ano;
     }
     

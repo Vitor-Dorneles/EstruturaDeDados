@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 
+import desafio.dadosClimaticos;
+
 public class principal {
     public static void main(String[] args) {
         ArrayList<dadosClimaticos> lista = new ArrayList<>();

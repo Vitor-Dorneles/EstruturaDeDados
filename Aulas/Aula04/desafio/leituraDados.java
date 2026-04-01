@@ -1,3 +1,4 @@
+package desafio;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.nio.charset.StandardCharsets;
@@ -10,7 +11,7 @@ import java.util.Map;
 public class leituraDados {
     public static void main(String[] args) {
         List<dadosClimaticos> lista = new ArrayList<>(); // criação da lista que vai guardar os dados do csv
-        String nomeBase = "EstruturaDeDados/Aulas/Aula04/dadosClimaticos.csv";
+        String nomeBase = "EstruturaDeDados/Aulas/Aula04/desafio/dadosClimaticos.csv";
         
         //leitor do arquivo nomeBase
         try (BufferedReader leitor = new BufferedReader(new FileReader(nomeBase, StandardCharsets.UTF_8))) {

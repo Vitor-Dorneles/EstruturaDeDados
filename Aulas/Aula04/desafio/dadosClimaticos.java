@@ -1,3 +1,4 @@
+package desafio;
 // Data: 18/03/2026
 public class dadosClimaticos {
     //criação do objeto pros campos do csv

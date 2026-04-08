@@ -48,14 +48,14 @@ class Aluno {
     }
 }
 
-public class ExemploMaria {  
+public class ExemploRevisao {  
     public static void main(String[] args) {
         List<Aluno> alunos = new ArrayList<>();
         Scanner teclado = new Scanner(System.in);
         String cpf, nome;
         Aluno alunoTMP;
         
-
+        principal: //rótulo para o loop, bom para sair de loops
         do {
             do {
                 System.out.print("Digite o cpf: ");
@@ -66,7 +66,8 @@ public class ExemploMaria {
                     for (Aluno a : alunos) {
                         System.out.println(a);
                     }
-                    System.exit(1);
+                    //System.exit(1); interrompe o sistema abruptamente
+                    break principal;
                 }
                 if (Util.cpfValido(cpf)) {
                     break;
@@ -84,7 +85,7 @@ public class ExemploMaria {
             }
         } while (true);
 
-    
+    teclado.close();
     }
 }
 

@@ -1,4 +1,4 @@
-package EstruturaDeDados.Aulas.Aula01;
+package Aulas.Aula01;
 
 import java.util.ArrayList; // import lista que podemos adicionar e remover sem tamanho fixo
 import java.util.Scanner; // import para ler do teclado

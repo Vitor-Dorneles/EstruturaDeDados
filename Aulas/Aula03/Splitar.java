@@ -1,4 +1,4 @@
-package EstruturaDeDados.Aulas.Aula03;
+package Aulas.Aula03;
 import java.util.ArrayList;
 
 public class Splitar {

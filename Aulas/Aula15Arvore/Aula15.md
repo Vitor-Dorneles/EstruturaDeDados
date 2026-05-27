@@ -21,7 +21,7 @@
             - deleção (delete)
 
 ### Teoria
-A arvore é uma máquina de BUSCA
+A arvore é uma **máquina** de **BUSCA**
 pois fazemos a busca por nivel
 dessa forma nivel 1(terá dois nodos)
 nivel 2 (terá 4 nodos)

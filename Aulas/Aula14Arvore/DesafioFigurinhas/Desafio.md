@@ -25,3 +25,15 @@ Opção:
 Toda vez que o programa for iniciado, os arquivos csv pessoais devem ser populados em suas arvores respectivas.
  
  
+
+ ```Java
+ // como fazer
+ class Figura{
+    int num;
+    String desc;
+
+    //construtores
+    //getters e setters
+    //toString() - Reescrevemos o toString para mostrar
+    //equals() - Reescrevemos o equals
+ }```

@@ -1,6 +1,5 @@
 package Aulas.DesafioFigurinhas;
 
-import java.nio.channels.Pipe.SourceChannel;
 import java.util.Scanner;
 import java.util.TreeSet;
 
@@ -67,19 +66,86 @@ public class FigurinhasPrincipal {
                     break;
                 case 3:
                     System.out.println("\n Cadastrar Figurinha Desejada");
-                    // (Vamos implementar a lógica aqui)
+                    System.out.println("Nome da Seleção:");
+                    String selecaoDes = teclado.nextLine();
+
+                    System.out.println("Número da Figurinha: ");
+                    int numeroDes = teclado.nextInt();
+                    teclado.nextLine();
+
+                    System.out.println("Descrição: (nome)");
+                    String descDes = teclado.nextLine();
+
+                    System.out.println("Quantidade: ");
+                    int qtdDes = teclado.nextInt();
+                    teclado.nextLine();
+
+                    System.out.println("Rara? (true/false)");
+                    boolean raraDes = teclado.nextBoolean();
+                    teclado.nextLine();
+
+                    Figurinhas novaDesejada = new Figurinhas(selecaoDes, numeroDes, descDes, qtdDes, raraDes);
+
+                    arvoreDesejadas.add(novaDesejada);
+                    GerenciarCSV.salvarFiguraCSV("Aulas/DesafioFigurinhas/ArquivosCSV/Figuras_desejadas_pessoais.csv",
+                            novaDesejada);
+                    
+                    System.out.println("Figurinha cadastrada");
+
                     break;
                 case 4:
                     System.out.println("\nAs Minhas Figurinhas Desejadas");
-                    // (Vamos implementar a lógica aqui)
+                    if (arvoreDesejadas.isEmpty()) {
+                        System.out.println("Nenhuma figurinha, cadastre");
+                    } else {
+                        for (Figurinhas figurinha : arvoreDesejadas) {
+                            System.out.println(figurinha.toString());
+                        }
+                    }
                     break;
                 case 5:
                     System.out.println("\nProcurar Matches (arquivo do Outro)");
-                    // (Vamos implementar a lógica aqui)
+                    System.out.println("Digite o nome do caminho do arquivo");
+                    String arquivoOutroRep = teclado.nextLine();
+
+                    TreeSet<Figurinhas> arvoreOutroRep = new TreeSet<>();
+                    GerenciarCSV.carregarArquivo(arquivoOutroRep, arvoreOutroRep);
+
+                    if (arvoreOutroRep.isEmpty()) {
+                        System.out.println("O arquivo não foi encontrado, ou está vazio");
+                    } else {
+                        System.out.println("\n Figurinhas de: " + arquivoOutroRep);
+
+                        for (Figurinhas figOutro : arvoreOutroRep) {
+                            System.out.println(figOutro.toString());
+                            if (arvoreDesejadas.contains(figOutro)) {
+                                System.out.println("Match de troca, uma figura desejada");
+                            }
+                        }
+                    }
                     break;
                 case 6:
                     System.out.println("\nProcurar Matches no arquivo do OUTRO");
-                    // (Vamos implementar a lógica aqui)
+                    System.out.println("Digite o nome do caminho do arquivo csv do outro (desejadas)");
+                    String arquivoOutDes = teclado.nextLine();
+
+                    TreeSet<Figurinhas> arvoreOutDes = new TreeSet<>();
+
+                    GerenciarCSV.carregarArquivo(arquivoOutDes, arvoreOutDes);
+
+                    if (arvoreOutDes.isEmpty()) {
+                        System.out.println("O arquivo não foi encontrado, ou está vazio");
+                    } else {
+                        System.out.println("\nFigurinhas de: " + arquivoOutDes);
+
+                        for (Figurinhas fig : arvoreOutDes) {
+                            System.out.println(fig.toString());
+
+                            if (arvoreRepeditdas.contains(fig)) {
+                                System.out.println("Match, voce tem essa figurinha para trocar");
+                            }
+                        }
+                    }
                     break;
                 case 7:
                     System.out.println("\n Saindo do programa");

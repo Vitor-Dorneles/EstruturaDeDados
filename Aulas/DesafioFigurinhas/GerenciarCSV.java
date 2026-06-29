@@ -25,11 +25,11 @@ public class GerenciarCSV {
                 String[] campos = linha.split(",");
 
                 if (campos.length == 5) {
-                    String selecao = campos[0];
-                    int numero = Integer.parseInt(campos[1]);
-                    String descricao = campos[2];
-                    int quantidade = Integer.parseInt(campos[3]);
-                    boolean rara = Boolean.parseBoolean(campos[4]);
+                    String selecao = campos[0].trim();
+                    int numero = Integer.parseInt(campos[1].trim());
+                    String descricao = campos[2].trim();
+                    int quantidade = Integer.parseInt(campos[3].trim());
+                    boolean rara = Boolean.parseBoolean(campos[4].trim());
 
                     Figurinhas figura = new Figurinhas(selecao, numero, descricao, quantidade, rara);
 

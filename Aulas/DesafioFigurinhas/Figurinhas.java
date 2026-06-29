@@ -31,8 +31,11 @@ public class Figurinhas implements Comparable<Figurinhas> {
 
     @Override
     public String toString() {
-        return "Seleção: " + nomeSelecao + "\tNum Figura: " + numeroFigura + "\tDesc: " + descricao + "\t Quantidade: "
-                + quantidade + "\tRara: " + raridade;
+        return "Selc:" + nomeSelecao +
+                " |Núm:" + numeroFigura +
+                " |Desc:" + descricao +
+                " |Qtd:" + quantidade +
+                " |Rara:" + raridade;
     }
 
     @Override

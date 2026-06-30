@@ -51,7 +51,7 @@ public class FigurinhasPrincipal {
                    Figurinhas novaRepetida = new Figurinhas(selecaoRep, numeroRep, desc, qtd, raridade);
 
                    arvoreRepeditdas.add(novaRepetida);
-                   GerenciarCSV.salvarFiguraCSV("figuras_repetidas_pessoais.csv", novaRepetida);
+                   GerenciarCSV.salvarFiguraCSV("Aulas/DesafioFigurinhas/ArquivosCSV/figuras_repetidas_pessoais.csv", novaRepetida);
                    System.out.println("Figurinha salva");
                     break;
                 case 2:
@@ -105,7 +105,7 @@ public class FigurinhasPrincipal {
                     break;
                 case 5:
                     System.out.println("\nProcurar Matches (arquivo do Outro)");
-                    System.out.println("Digite o nome do caminho do arquivo");
+                    System.out.println("Digite o nome do caminho relativo do arquivo (repetidas)");
                     String arquivoOutroRep = teclado.nextLine();
 
                     TreeSet<Figurinhas> arvoreOutroRep = new TreeSet<>();
@@ -119,14 +119,14 @@ public class FigurinhasPrincipal {
                         for (Figurinhas figOutro : arvoreOutroRep) {
                             System.out.println(figOutro.toString());
                             if (arvoreDesejadas.contains(figOutro)) {
-                                System.out.println("Match de troca, uma figura desejada");
+                                System.out.println("Match de troca, uma figura desejada: " + figOutro.getDescricao());
                             }
                         }
                     }
                     break;
                 case 6:
                     System.out.println("\nProcurar Matches no arquivo do OUTRO");
-                    System.out.println("Digite o nome do caminho do arquivo csv do outro (desejadas)");
+                    System.out.println("Digite o nome do caminho relativo do arquivo csv do outro (desejadas)");
                     String arquivoOutDes = teclado.nextLine();
 
                     TreeSet<Figurinhas> arvoreOutDes = new TreeSet<>();
@@ -142,7 +142,7 @@ public class FigurinhasPrincipal {
                             System.out.println(fig.toString());
 
                             if (arvoreRepeditdas.contains(fig)) {
-                                System.out.println("Match, voce tem essa figurinha para trocar");
+                                System.out.println("Match, voce tem essa figurinha para trocar" + fig.getDescricao());
                             }
                         }
                     }

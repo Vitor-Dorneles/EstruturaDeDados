@@ -25,7 +25,7 @@ public class GerenciarCSV {
                 String[] campos = linha.split(",");
 
                 if (campos.length == 5) {
-                    String selecao = campos[0].trim();
+                    String selecao = campos[0].trim(); //trim para desconsiderar espaçoes em branco no inicio e no final
                     int numero = Integer.parseInt(campos[1].trim());
                     String descricao = campos[2].trim();
                     int quantidade = Integer.parseInt(campos[3].trim());
